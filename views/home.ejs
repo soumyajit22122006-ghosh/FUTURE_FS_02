@@ -1,0 +1,114 @@
+<% if (success && success.length > 0) { %>
+    <div class="container mt-4">
+        <div
+            class="alert alert-success alert-dismissible fade show"
+            role="alert"
+        >
+            <i class="fa-solid fa-circle-check me-2"></i>
+            <%= success[0] %>
+            <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="alert"
+                aria-label="Close"
+            ></button>
+        </div>
+    </div>
+<% } %>
+<section class="hero-section">
+    <div class="container">
+        <div class="row justify-content-center text-center">
+            <div class="col-lg-9">
+                <div class="hero-badge mb-4">
+                    <i class="fa-solid fa-bolt me-2"></i>
+                    Simple & Powerful Lead Management
+                </div>
+                <h1 class="hero-title">
+                    Turn Leads Into
+                    <span>Relationships.</span>
+                </h1>
+                <p class="hero-description mx-auto">
+                    Manage enquiries, track potential clients,
+                    organize follow-ups, and keep your entire
+                    lead journey in one place.
+                </p>
+                <div class="d-flex justify-content-center gap-3 flex-wrap mt-4">
+                    <a
+                        href="/enquiry"
+                        class="btn btn-primary btn-lg px-4"
+                    >
+                        <i class="fa-solid fa-user-plus me-2"></i>
+                        Add Enquiry
+                    </a>
+                    <a
+                        href="/lead-management"
+                        class="btn btn-outline-primary btn-lg px-4"
+                    >
+                        <i class="fa-solid fa-chart-line me-2"></i>
+                        Lead Management
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="features-section">
+    <div class="container">
+        <div class="text-center mb-5">
+            <p class="section-label">
+                LEADSPHERE
+            </p>
+            <h2 class="section-title">
+                Everything you need to manage leads
+            </h2>
+            <p class="section-description">
+                Keep your potential clients organized
+                from the first enquiry to conversion.
+            </p>
+        </div>
+        <div class="row g-4">
+            <div class="col-md-6 col-lg-4">
+                <div class="feature-card h-100">
+                    <div class="feature-icon">
+                        <i class="fa-solid fa-user-plus"></i>
+                    </div>
+                    <h3>
+                        Capture Leads
+                    </h3>
+                    <p>
+                        Store important client information
+                        from every enquiry in one organized place.
+                    </p>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4">
+                <div class="feature-card h-100">
+                    <div class="feature-icon">
+                        <i class="fa-solid fa-list-check"></i>
+                    </div>
+                    <h3>
+                        Track Lead Status
+                    </h3>
+                    <p>
+                        Track leads through New, Contacted,
+                        Follow-up, Converted, and Lost stages.
+                    </p>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4">
+                <div class="feature-card h-100">
+                    <div class="feature-icon">
+                        <i class="fa-solid fa-calendar-check"></i>
+                    </div>
+                    <h3>
+                        Manage Follow-ups
+                    </h3>
+                    <p>
+                        Keep upcoming and overdue follow-ups
+                        organized so important leads don't get missed.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

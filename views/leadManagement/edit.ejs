@@ -1,0 +1,260 @@
+<div class="py-5">
+
+    <div class="container">
+
+        <!-- Page Header -->
+
+        <div class="d-flex justify-content-between align-items-center flex-wrap gap-3 mb-5">
+
+            <div>
+
+                <p class="section-label mb-2">
+                    LEAD MANAGEMENT
+                </p>
+
+                <h1 class="fw-bold mb-2">
+                    Edit Lead
+                </h1>
+
+                <p class="text-secondary mb-0">
+                    Update the information and status of this lead.
+                </p>
+
+            </div>
+
+            <a
+                href="/lead-management/leads/<%= lead._id %>"
+                class="btn btn-outline-secondary"
+            >
+                <i class="fa-solid fa-arrow-left me-2"></i>
+                Back to Lead
+            </a>
+
+        </div>
+
+
+        <!-- Edit Form -->
+
+        <div class="row justify-content-center">
+
+            <div class="col-lg-8">
+
+                <div class="feature-card">
+
+                    <form
+                        action="/lead-management/leads/<%= lead._id %>?_method=PUT"
+                        method="POST"
+                    >
+
+                        <!-- Name -->
+
+                        <div class="mb-4">
+
+                            <label
+                                for="name"
+                                class="form-label fw-semibold"
+                            >
+                                Name
+                            </label>
+
+                            <input
+                                type="text"
+                                class="form-control"
+                                id="name"
+                                name="name"
+                                value="<%= lead.name %>"
+                                required
+                            >
+
+                        </div>
+
+
+                        <!-- Phone -->
+
+                        <div class="mb-4">
+
+                            <label
+                                for="phone"
+                                class="form-label fw-semibold"
+                            >
+                                Phone
+                            </label>
+
+                            <input
+                                type="tel"
+                                class="form-control"
+                                id="phone"
+                                name="phone"
+                                value="<%= lead.phone %>"
+                                pattern="[0-9]{10}"
+                                maxlength="10"
+                                required
+                            >
+
+                            <div class="form-text">
+                                Enter exactly 10 digits.
+                            </div>
+
+                        </div>
+
+
+                        <!-- Email -->
+
+                        <div class="mb-4">
+
+                            <label
+                                for="email"
+                                class="form-label fw-semibold"
+                            >
+                                Email
+                            </label>
+
+                            <input
+                                type="email"
+                                class="form-control"
+                                id="email"
+                                name="email"
+                                value="<%= lead.email || '' %>"
+                            >
+
+                        </div>
+
+
+                        <!-- Company -->
+
+                        <div class="mb-4">
+
+                            <label
+                                for="company"
+                                class="form-label fw-semibold"
+                            >
+                                Company / Organization
+                            </label>
+
+                            <input
+                                type="text"
+                                class="form-control"
+                                id="company"
+                                name="company"
+                                value="<%= lead.company || '' %>"
+                            >
+
+                        </div>
+
+
+                        <!-- Status -->
+
+                        <div class="mb-4">
+
+                            <label
+                                for="status"
+                                class="form-label fw-semibold"
+                            >
+                                Status
+                            </label>
+
+                            <select
+                                class="form-select"
+                                id="status"
+                                name="status"
+                                required
+                            >
+
+                                <option
+                                    value="New"
+                                    <%= lead.status === "New" ? "selected" : "" %>
+                                >
+                                    New
+                                </option>
+
+                                <option
+                                    value="Contacted"
+                                    <%= lead.status === "Contacted" ? "selected" : "" %>
+                                >
+                                    Contacted
+                                </option>
+
+                                <option
+                                    value="Follow-up"
+                                    <%= lead.status === "Follow-up" ? "selected" : "" %>
+                                >
+                                    Follow-up
+                                </option>
+
+                                <option
+                                    value="Converted"
+                                    <%= lead.status === "Converted" ? "selected" : "" %>
+                                >
+                                    Converted
+                                </option>
+
+                                <option
+                                    value="Lost"
+                                    <%= lead.status === "Lost" ? "selected" : "" %>
+                                >
+                                    Lost
+                                </option>
+
+                            </select>
+
+                        </div>
+
+
+                        <!-- Follow-up Date -->
+
+                        <div class="mb-4">
+
+                            <label
+                                for="followUpDate"
+                                class="form-label fw-semibold"
+                            >
+                                Follow-up Date
+                            </label>
+
+                            <input
+                                type="date"
+                                class="form-control"
+                                id="followUpDate"
+                                name="followUpDate"
+                                value="<%= lead.followUpDate ? new Date(lead.followUpDate).toISOString().split('T')[0] : '' %>"
+                            >
+
+                            <div class="form-text">
+                                Add a follow-up date when needed.
+                            </div>
+
+                        </div>
+
+
+                        <!-- Buttons -->
+
+                        <div class="d-flex justify-content-end gap-2 pt-2">
+
+                            <a
+                                href="/lead-management/leads/<%= lead._id %>"
+                                class="btn btn-outline-secondary"
+                            >
+                                Cancel
+                            </a>
+
+                            <button
+                                type="submit"
+                                class="btn btn-primary"
+                            >
+                                <i class="fa-solid fa-floppy-disk me-2"></i>
+                                Save Changes
+                            </button>
+
+                        </div>
+
+                    </form>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>

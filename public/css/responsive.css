@@ -1,0 +1,186 @@
+/* Tablet */
+
+@media (max-width: 991.98px) {
+
+    /* Navbar */
+
+    .navbar-nav {
+        padding-top: 15px;
+    }
+
+    .navbar-nav .nav-link {
+        padding: 8px 0;
+    }
+
+
+    /* Page spacing */
+
+    .py-5 {
+        padding-top: 3rem !important;
+        padding-bottom: 3rem !important;
+    }
+
+
+    /* Dashboard */
+
+    .dashboard-card {
+        padding: 24px;
+    }
+
+
+    /* Tables */
+
+    .table-responsive {
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+    }
+
+}
+
+
+/* Mobile */
+
+@media (max-width: 767.98px) {
+
+    /* General */
+
+    .container {
+        padding-left: 18px;
+        padding-right: 18px;
+    }
+
+
+    /* Headings */
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    h2 {
+        font-size: 1.65rem;
+    }
+
+    h3 {
+        font-size: 1.4rem;
+    }
+
+
+    /* Page sections */
+
+    .py-5 {
+        padding-top: 2.5rem !important;
+        padding-bottom: 2.5rem !important;
+    }
+
+
+    /* Dashboard cards */
+
+    .dashboard-card {
+        padding: 22px;
+        gap: 16px;
+    }
+
+    .dashboard-icon {
+        width: 48px;
+        height: 48px;
+        font-size: 18px;
+    }
+
+    .dashboard-number {
+        font-size: 26px;
+    }
+
+
+    /* Buttons */
+
+    .btn {
+        min-height: 42px;
+    }
+
+
+    /* Forms */
+
+    .form-control,
+    .form-select {
+        min-height: 44px;
+    }
+
+    textarea.form-control {
+        min-height: 120px;
+    }
+
+
+    /* Lead management table */
+
+    .table {
+        min-width: 900px;
+    }
+
+
+    /* Feature cards */
+
+    .feature-card {
+        padding: 22px;
+    }
+
+
+    /* Footer */
+
+    .footer {
+        padding: 22px 0;
+        text-align: center;
+    }
+
+}
+
+
+/* Small mobile */
+
+@media (max-width: 575.98px) {
+
+    /* Headings */
+
+    h1 {
+        font-size: 1.75rem;
+    }
+
+
+    /* Header buttons */
+
+    .d-flex.gap-2 {
+        width: 100%;
+    }
+
+
+    /* Prevent buttons from becoming too small */
+
+    .d-flex.gap-2 .btn {
+        flex: 1;
+    }
+
+
+    /* Dashboard */
+
+    .dashboard-card {
+        padding: 20px;
+    }
+
+
+    /* Forms */
+
+    .feature-card {
+        padding: 18px;
+    }
+
+
+    /* Action buttons */
+
+    .d-flex.justify-content-end {
+        flex-direction: column;
+    }
+
+    .d-flex.justify-content-end .btn {
+        width: 100%;
+    }
+
+}

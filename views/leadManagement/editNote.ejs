@@ -1,0 +1,132 @@
+<div class="py-5">
+
+    <div class="container">
+
+        <!-- Page Header -->
+
+        <div class="d-flex justify-content-between align-items-center flex-wrap gap-3 mb-5">
+
+            <div>
+
+                <p class="section-label mb-2">
+                    LEAD MANAGEMENT
+                </p>
+
+                <h1 class="fw-bold mb-2">
+                    Edit Lead Note
+                </h1>
+
+                <p class="text-secondary mb-0">
+                    Update the communication note for <strong><%= lead.name %></strong>.
+                </p>
+
+            </div>
+
+            <a
+                href="/lead-management/leads/<%= lead._id %>"
+                class="btn btn-outline-secondary"
+            >
+                <i class="fa-solid fa-arrow-left me-2"></i>
+                Back to Lead
+            </a>
+
+        </div>
+
+
+        <!-- Note Form -->
+
+        <div class="row justify-content-center">
+
+            <div class="col-lg-8">
+
+                <div class="feature-card">
+
+                    <form
+                        action="/lead-management/leads/<%= lead._id %>/note?_method=PUT"
+                        method="POST"
+                    >
+
+                        <!-- Lead -->
+
+                        <div class="mb-4">
+
+                            <label class="form-label fw-semibold">
+                                Lead
+                            </label>
+
+                            <div class="p-3 bg-light rounded-3">
+
+                                <div class="fw-semibold">
+                                    <%= lead.name %>
+                                </div>
+
+                                <div class="text-secondary small">
+                                    <%= lead.phone %>
+                                    <% if (lead.company) { %>
+                                        · <%= lead.company %>
+                                    <% } %>
+                                </div>
+
+                            </div>
+
+                        </div>
+
+
+                        <!-- Note -->
+
+                        <div class="mb-4">
+
+                            <label
+                                for="note"
+                                class="form-label fw-semibold"
+                            >
+                                Communication Note
+                            </label>
+
+                            <textarea
+                                class="form-control"
+                                id="note"
+                                name="note"
+                                rows="7"
+                                placeholder="Write a note about your communication with this lead..."
+                            ><%= lead.note || "" %></textarea>
+
+                            <div class="form-text">
+                                Keep the note focused on the latest communication or important information about this lead.
+                            </div>
+
+                        </div>
+
+
+                        <!-- Buttons -->
+
+                        <div class="d-flex justify-content-end gap-2">
+
+                            <a
+                                href="/lead-management/leads/<%= lead._id %>"
+                                class="btn btn-outline-secondary"
+                            >
+                                Cancel
+                            </a>
+
+                            <button
+                                type="submit"
+                                class="btn btn-primary"
+                            >
+                                <i class="fa-solid fa-floppy-disk me-2"></i>
+                                Save Note
+                            </button>
+
+                        </div>
+
+                    </form>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
