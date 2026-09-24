@@ -4,6 +4,9 @@
 
 LeadSphere is a simple and professional CRM application designed to help businesses manage potential clients, track lead status, record communication notes, and manage follow-ups from one place.
 
+## Live link
+https://leadsphere-tabi.onrender.com
+
 ## Features
 
 - Add and manage potential leads
